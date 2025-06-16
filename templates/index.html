@@ -86,7 +86,12 @@
       Pronto añadiremos nuevas funciones conectadas directamente con nuestra base de datos.
     </p>
   </main>
-
+      <h2>Lista de Proveedores</h2>
+    <ul>
+        {% for proveedor in proveedores %}
+            <li>{{ proveedor }}</li>
+        {% endfor %}
+    </ul>
   <footer>
     © 2025 Tech United. Todos los derechos reservados.
   </footer>
