@@ -53,13 +53,13 @@ jobs:
         run: unzip release.zip
 
       - name: Insertar proveedor en BD
-          env:
+        env:
              PGHOST: ${{ webproveedores-server.postgres.database.azure.com }}
              PGUSER: ${{ fsvbkhvxta }}
              PGPASSWORD: ${{ r0Yt$gVLsCi7$zCK }}
              PGDATABASE: ${{ webproveedores-database }}
              PGPORT: ${{ 5432 }}
-          run: python insert_proveedor.py
+        run: python insert_proveedor.py
 
 
       - name: 'Deploy to Azure Web App'
@@ -69,3 +69,4 @@ jobs:
           app-name: 'webproveedores'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B94B420D2D2C452294AF9E599A604C5A }}
+          
