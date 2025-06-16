@@ -54,11 +54,11 @@ jobs:
 
       - name: Insertar proveedor en BD
         env:
-             PGHOST: ${{ webproveedores-server.postgres.database.azure.com }}
-             PGUSER: ${{ fsvbkhvxta }}
-             PGPASSWORD: ${{ r0Yt$gVLsCi7$zCK }}
-             PGDATABASE: ${{ webproveedores-database }}
-             PGPORT: ${{ 5432 }}
+             PGHOST: webproveedores-server.postgres.database.azure.com 
+             PGUSER: fsvbkhvxta
+             PGPASSWORD: r0Yt$gVLsCi7$zCK 
+             PGDATABASE: webproveedores-database
+             PGPORT: 5432 
         run: python insert_proveedor.py
 
 
